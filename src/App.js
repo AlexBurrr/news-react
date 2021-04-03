@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Components/Home'
+import Nav from './Components/Nav'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import Buisness from './Pages/Buisness'
+import Politics from './Pages/Politics'
+import Health from './Pages/Health'
+import Sports from './Pages/Sports'
+import Entertainment from './Pages/Entertainment'
+import SignUpLogIn from './Pages/SignUpLogIn'
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Switch>
+          <Route path='/' component={Home} exact />
+          <Route path='/politics' component={Politics} />
+          <Route path='/buisness' component={Buisness} />
+          <Route path='/health' component={Health} />
+          <Route path='/entertainment' component={Entertainment} />
+          <Route path='/sports' component={Sports} />
+          <Route path='/logInSignUp' component={SignUpLogIn} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
