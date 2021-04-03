@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
+import FullCard from '../Components/FullCard'
+import ex from '../Images/example.jpg'
 
 const Home = () => {
 
@@ -14,7 +16,8 @@ const Home = () => {
 
     return (
         <div>
-            home
+            <FullCard source={ex} title={'lorem20'} details={'details'} type={'type'} date={'date'} />
+            <FullCard source={ex} title={'lorem20'} details={'details'} type={'type'} date={'date'} />
         </div>
     )
 }
