@@ -4,7 +4,7 @@ import Nav from './Components/Nav'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Buisness from './Pages/Buisness'
-import Politics from './Pages/Politics'
+import General from './Pages/General'
 import Health from './Pages/Health'
 import Sports from './Pages/Sports'
 import Entertainment from './Pages/Entertainment'
@@ -20,7 +20,7 @@ function App() {
         <Nav />
         <Switch>
           <Route path='/' component={Home} exact />
-          <Route path='/politics' component={Politics} />
+          <Route path='/General' component={General} />
           <Route path='/buisness' component={Buisness} />
           <Route path='/health' component={Health} />
           <Route path='/entertainment' component={Entertainment} />

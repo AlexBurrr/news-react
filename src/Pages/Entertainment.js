@@ -1,9 +1,10 @@
 import React from 'react'
+import FullCard from '../Components/FullCard'
 
 const Entertainment = () => {
     return (
         <div>
-            ent
+            <FullCard />
         </div>
     )
 }

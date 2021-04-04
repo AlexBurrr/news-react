@@ -38,7 +38,7 @@ const Nav = () => {
         <NavContainer>
             <Link to='/'><SiteIcon>Newsss</SiteIcon></Link>
             <ItemUl>
-                <Link to='politics'><ItemLi>Politics</ItemLi></Link>
+                <Link to='general'><ItemLi>General</ItemLi></Link>
                 <Link to='health'><ItemLi>Health</ItemLi></Link>
                 <Link to='buisness'><ItemLi>Buisness</ItemLi></Link>
                 <Link to='sports'> <ItemLi>Sports</ItemLi></Link>
