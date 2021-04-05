@@ -17,6 +17,7 @@ position: relative;
 margin-left: 2rem;
 
 
+
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 3rem;
@@ -37,7 +38,6 @@ margin-left: 2rem;
 const Home = () => {
 
     const [news, setNews] = useState([])
-    const [image, setImage] = useState([])
 
     useEffect(() => {
         axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')

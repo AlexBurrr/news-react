@@ -8,6 +8,7 @@ width:30rem;
 height: 50rem;
 margin:0;
 box-shadow: 1px 2px 12px -4px #000000;
+cursor: pointer;
 `
 const ImageContainer = styled.div`
 position: relative;
@@ -18,7 +19,6 @@ height: 35rem;
 
 const CardImage = styled.img`
 position: relative;
-background-color: blue;
 width: 30rem ;
 height: 30rem;
 object-fit: cover;
@@ -72,7 +72,7 @@ const FullCard = ({ source, title, details, type, date }) => {
 
 
     return (
-        <CardContainer>
+        <CardContainer >
             <ImageContainer>
                 <CardImage src={source} alt='/' />
             </ImageContainer>
