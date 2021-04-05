@@ -5,42 +5,50 @@ import styled from 'styled-components'
 const CardContainer = styled.div`
 position: relative;
 width:30rem;
-height: 40rem;
+height: 50rem;
 margin:0;
 box-shadow: 1px 2px 12px -4px #000000;
 `
+const ImageContainer = styled.div`
+position: relative;
+width: 30rem;
+height: 35rem;
+
+`
+
 const CardImage = styled.img`
 position: relative;
 background-color: blue;
-width: 100%; 
-height: 15rem;
+width: 30rem ;
+height: 30rem;
 object-fit: cover;
 `
 const CardText = styled.div`
 position: relative;
-padding: 1rem;
 background-color: #FFFFFF;
-height: 20rem;
+height: 10rem;
+padding: 1rem;
+top: -3rem;
 ;
 `
 const Title = styled.div`
 position: relative;
 width: 100%;
-height:6rem;
+height:5rem;
 font-size: 1.7rem;
 `
 const BottomContainer = styled.div`
 display: flex;
 position: relative;
-top:8rem;
+top:3rem;
 
 `
 
 const Details = styled.div`
 position: relative;
 width: 100%;
-top:2rem;
-height: 7rem;
+top:2.5rem;
+height: 5rem;
 font-size: 1rem;
 color: #88959D;
 `
@@ -59,23 +67,16 @@ color: #8A969F;
 
 const FullCard = ({ source, title, details, type, date }) => {
 
-    const [news, setNews] = useState([])
 
-
-    useEffect(() => {
-        axios.get('https://api.nytimes.com/svc/topstories/v2/politics.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')
-            .then(res => {
-                setNews(res.data.results);
-
-            })
-
-    }, [])
 
 
 
     return (
         <CardContainer>
-            <CardImage src={source} alt='/' />
+            <ImageContainer>
+                <CardImage src={source} alt='/' />
+            </ImageContainer>
+
             <CardText>
                 <Title>{title}</Title>
                 <Details>{details}</Details>

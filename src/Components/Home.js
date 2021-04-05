@@ -4,8 +4,33 @@ import FullCard from '../Components/FullCard'
 import WideCard from '../Components/WideCard'
 import SmallCard from '../Components/SmallCard'
 import ex from '../Images/example.jpg'
+import styled from 'styled-components'
 
 
+const HomeContainer = styled.div`
+position: relative;
+
+`
+const Cards = styled.div`
+display: grid;
+position: relative;
+margin-left: 2rem;
+
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+  grid-template-areas:
+    ". . . . "
+    ". . . . "
+    ". . . . "
+    ". . . . "
+    ". . . . "
+    ". . . . "
+    ". . . . ";
+    
+
+    `
 
 
 
@@ -23,26 +48,32 @@ const Home = () => {
 
     }, [])
 
-
     let i;
 
     let image1 = []
     for (i = 0; i < news.length; i++) {
-        image1.push(news[i]['multimedia']['3']['url'])
+        image1.push(news[i]['multimedia']['0']['url'])
     }
 
-    console.log(image1[0]);
 
 
     return (
-        <div>
-            {news.map((news, index) => {
-                return (
-                    < FullCard key={index} source={image1[index]} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
-                )
-            })}
 
-        </div >
+        <HomeContainer>
+
+            <Cards>
+                {news.map((news, index) => {
+                    return (
+                        < FullCard key={index} source={image1[index]} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
+                    )
+                })}
+
+            </Cards >
+
+
+        </HomeContainer>
+
+
     )
 }
 
