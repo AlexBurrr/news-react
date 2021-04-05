@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Politics = () => {
+const General = () => {
     return (
         <div>
             general
@@ -8,4 +8,4 @@ const Politics = () => {
     )
 }
 
-export default Politics
+export default General

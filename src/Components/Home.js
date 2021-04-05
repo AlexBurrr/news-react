@@ -11,19 +11,37 @@ import ex from '../Images/example.jpg'
 
 const Home = () => {
 
-    const [news, setNews] = useState(null)
-
+    const [news, setNews] = useState([])
+    const [image, setImage] = useState([])
 
     useEffect(() => {
-        axios.get('https://api.nytimes.com/svc/topstories/v2/politics.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')
+        axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')
             .then(res => {
                 setNews(res.data.results);
+
             })
+
     }, [])
+
+
+    let i;
+
+    let image1 = []
+    for (i = 0; i < news.length; i++) {
+        image1.push(news[i]['multimedia']['3']['url'])
+    }
+
+    console.log(image1[0]);
+
+
     return (
         <div>
-            {console.log(news)}
-            <FullCard source={news[1].multimedia[2].url} title={news[1].title} details={news[1].description} type={news[1].category} date={news[1].published_at} />
+            {news.map((news, index) => {
+                return (
+                    < FullCard key={index} source={image1[index]} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
+                )
+            })}
+
         </div >
     )
 }

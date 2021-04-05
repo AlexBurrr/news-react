@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import styled from 'styled-components'
 
 const CardContainer = styled.div`
@@ -57,6 +58,21 @@ color: #8A969F;
 
 
 const FullCard = ({ source, title, details, type, date }) => {
+
+    const [news, setNews] = useState([])
+
+
+    useEffect(() => {
+        axios.get('https://api.nytimes.com/svc/topstories/v2/politics.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')
+            .then(res => {
+                setNews(res.data.results);
+
+            })
+
+    }, [])
+
+
+
     return (
         <CardContainer>
             <CardImage src={source} alt='/' />
