@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import FullCard from '../Components/FullCard'
 import axios from 'axios'
+import PageTitle from '../Components/PageTitle'
+
 
 const HomeContainer = styled.div`
 position: relative;
@@ -53,6 +55,7 @@ const Health = () => {
 
     return (
         <HomeContainer>
+            <PageTitle title={'Health'} />
 
             <Cards>
                 {news.map((news, index) => {

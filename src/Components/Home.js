@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import FullCard from '../Components/FullCard'
 import styled from 'styled-components'
+import PageTitle from './PageTitle'
 
 
 const HomeContainer = styled.div`
@@ -57,6 +58,7 @@ const Home = () => {
     return (
 
         <HomeContainer>
+            <PageTitle title={'Home'} />
 
             <Cards>
                 {news.map((news, index) => {
