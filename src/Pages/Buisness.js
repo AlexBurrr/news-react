@@ -63,7 +63,7 @@ const Buisness = () => {
             <Cards>
                 {news.map((news, index) => {
                     return (
-                        < FullCard key={index} source={image1[index]} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
+                        < FullCard url={news.url} key={index} source={image1[index]} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
                     )
                 })}
 
