@@ -4,10 +4,10 @@ import Nav from './Components/Nav'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Buisness from './Pages/Buisness'
-import General from './Pages/General'
+import Politics from './Pages/Politics'
 import Health from './Pages/Health'
 import Sports from './Pages/Sports'
-import Entertainment from './Pages/Entertainment'
+import Tech from './Pages/Tech'
 import SignUpLogIn from './Pages/SignUpLogIn'
 
 
@@ -20,10 +20,10 @@ function App() {
         <Nav />
         <Switch>
           <Route path='/' component={Home} exact />
-          <Route path='/General' component={General} />
+          <Route path='/Politics' component={Politics} />
           <Route path='/buisness' component={Buisness} />
           <Route path='/health' component={Health} />
-          <Route path='/entertainment' component={Entertainment} />
+          <Route path='/tech' component={Tech} />
           <Route path='/sports' component={Sports} />
           <Route path='/logInSignUp' component={SignUpLogIn} />
         </Switch>

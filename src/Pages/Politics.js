@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import FullCard from '../Components/FullCard'
 import styled from 'styled-components'
-
+import FullCard from '../Components/FullCard'
+import axios from 'axios'
 
 const HomeContainer = styled.div`
 position: relative;
@@ -30,14 +29,11 @@ margin-left: 2rem;
 
     `
 
-
-
-const Home = () => {
-
+const Politics = () => {
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')
+        axios.get('https://api.nytimes.com/svc/topstories/v2/politics.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')
             .then(res => {
                 setNews(res.data.results);
 
@@ -54,8 +50,8 @@ const Home = () => {
 
 
 
-    return (
 
+    return (
         <HomeContainer>
 
             <Cards>
@@ -70,8 +66,7 @@ const Home = () => {
 
         </HomeContainer>
 
-
     )
 }
 
-export default Home
+export default Politics

@@ -38,11 +38,11 @@ const Nav = () => {
         <NavContainer>
             <Link to='/'><SiteIcon>Newsss</SiteIcon></Link>
             <ItemUl>
-                <Link to='general'><ItemLi>General</ItemLi></Link>
+                <Link to='politics'><ItemLi>Politics</ItemLi></Link>
                 <Link to='health'><ItemLi>Health</ItemLi></Link>
                 <Link to='buisness'><ItemLi>Buisness</ItemLi></Link>
                 <Link to='sports'> <ItemLi>Sports</ItemLi></Link>
-                <Link to='entertainment'><ItemLi>Entertainment</ItemLi></Link>
+                <Link to='tech'><ItemLi>Tech</ItemLi></Link>
             </ItemUl>
             <Link to='/logInSignUp'><Login>LogIn/SignUp</Login></Link>
         </NavContainer>
