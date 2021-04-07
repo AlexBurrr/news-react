@@ -36,7 +36,7 @@ margin-right: 5rem;
 const Nav = () => {
     return (
         <NavContainer>
-            <Link to='/'><SiteIcon>Newsss</SiteIcon></Link>
+            <Link to='/'><SiteIcon>Newwws</SiteIcon></Link>
             <ItemUl>
                 <Link to='politics'><ItemLi>Politics</ItemLi></Link>
                 <Link to='health'><ItemLi>Health</ItemLi></Link>
