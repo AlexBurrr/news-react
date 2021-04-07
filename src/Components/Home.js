@@ -38,7 +38,7 @@ const Home = () => {
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        axios.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')
+        axios.get('https://api.nytimes.com/svc/topstories/v2/us.json?api-key=v4qAuP3qx1XstxnWCsStbBmLWancJwa4')
             .then(res => {
                 setNews(res.data.results);
 
@@ -65,7 +65,7 @@ const Home = () => {
             <Cards>
                 {news.map((news, index) => {
                     return (
-                        < FullCard url={news.url} key={index} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
+                        < FullCard url={news.url} source={image1[index]} key={index} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
                     )
                 })}
 
