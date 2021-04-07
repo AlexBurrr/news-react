@@ -47,12 +47,12 @@ const Home = () => {
     }, [])
 
     let i;
-
+    console.log(news);
     let image1 = []
     for (i = 0; i < news.length; i++) {
         image1.push(news[i]['multimedia']['0']['url'])
     }
-
+    console.log(image1);
 
 
 
@@ -65,7 +65,7 @@ const Home = () => {
             <Cards>
                 {news.map((news, index) => {
                     return (
-                        < FullCard url={news.url} key={index} source={image1[index]} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
+                        < FullCard url={news.url} key={index} title={news.title} details={news.abstract} type={news.section} date={news.published_date} />
                     )
                 })}
 

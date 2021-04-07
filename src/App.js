@@ -8,7 +8,7 @@ import Politics from './Pages/Politics'
 import Health from './Pages/Health'
 import Sports from './Pages/Sports'
 import Tech from './Pages/Tech'
-import SignUpLogIn from './Pages/SignUpLogIn'
+import Form from './Components/Form'
 
 
 
@@ -25,7 +25,7 @@ function App() {
           <Route path='/health' component={Health} />
           <Route path='/tech' component={Tech} />
           <Route path='/sports' component={Sports} />
-          <Route path='/logInSignUp' component={SignUpLogIn} />
+          <Route path='/form' component={Form} />
         </Switch>
       </div>
     </Router>

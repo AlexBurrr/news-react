@@ -44,7 +44,7 @@ const Nav = () => {
                 <Link to='sports'> <ItemLi>Sports</ItemLi></Link>
                 <Link to='tech'><ItemLi>Tech</ItemLi></Link>
             </ItemUl>
-            <Link to='/logInSignUp'><Login>LogIn/SignUp</Login></Link>
+            <Link to='/form'><Login>LogIn/SignUp</Login></Link>
         </NavContainer>
     )
 }
